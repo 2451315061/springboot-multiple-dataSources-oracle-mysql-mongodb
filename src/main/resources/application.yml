@@ -1,0 +1,36 @@
+server:
+    port: 8080
+
+test1-datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/database1?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+test2-datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/database2?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+test3-datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=xxx)(PORT=61512))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xxx)))
+    username: root
+    password: 123456
+test4-datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=xxx)(PORT=61512))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xxx)))
+    username: root
+    password: 123456
+#数据库连接池
+# mongodb多数据源
+spring:
+  data:
+    mongodb:
+      one:
+        uri: mongodb://localhost:27017/test
+        database: test
+      two:
+        uri: mongodb://localhost:27017/test1
+        database: test1
+
+
